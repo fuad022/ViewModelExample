@@ -1,4 +1,4 @@
-package com.example.viewmodelexample.ui.account
+package com.example.viewmodelexample.ui.auth
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,11 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.viewmodelexample.databinding.FragmentAccountBinding
+import com.example.viewmodelexample.databinding.FragmentLoginBinding
 import com.google.android.material.textfield.TextInputLayout
 
-class AccountFragment : Fragment() {
-    private val binding by lazy { FragmentAccountBinding.inflate(layoutInflater) }
+class LoginFragment : Fragment() {
+    private val binding by lazy { FragmentLoginBinding.inflate(layoutInflater) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,7 +32,7 @@ class AccountFragment : Fragment() {
                     validatePassword(password, passwordInputLayout)
                 ) {
                     val action =
-                        AccountFragmentDirections.actionAccountFragmentToAccountInfoFragment()
+                        LoginFragmentDirections.actionLoginFragmentToPostFragment()
                     findNavController().navigate(action)
                 }
             }

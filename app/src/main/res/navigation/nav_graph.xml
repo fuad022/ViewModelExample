@@ -3,21 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/accountFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
-        android:id="@+id/accountFragment"
-        android:name="com.example.viewmodelexample.ui.account.AccountFragment"
-        android:label="fragment_account"
-        tools:layout="@layout/fragment_account">
+        android:id="@+id/loginFragment"
+        android:name="com.example.viewmodelexample.ui.auth.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
         <action
-            android:id="@+id/action_accountFragment_to_accountInfoFragment"
-            app:destination="@id/accountInfoFragment" />
+            android:id="@+id/action_loginFragment_to_postFragment"
+            app:destination="@id/postFragment" />
     </fragment>
     <fragment
-        android:id="@+id/accountInfoFragment"
-        android:name="com.example.viewmodelexample.ui.account.AccountInfoFragment"
-        android:label="fragment_account_info"
-        tools:layout="@layout/fragment_account_info">
-    </fragment>
+        android:id="@+id/postFragment"
+        android:name="com.example.viewmodelexample.ui.post.PostFragment"
+        android:label="PostFragment"
+        tools:layout="@layout/fragment_post" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.viewmodelexample.ui.account
+package com.example.viewmodelexample.ui.post
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,11 +11,11 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.viewmodelexample.data.remote.PostAdapter
 import com.example.viewmodelexample.data.remote.PostViewModel
 import com.example.viewmodelexample.data.remote.model.PostModel
-import com.example.viewmodelexample.databinding.FragmentAccountInfoBinding
+import com.example.viewmodelexample.databinding.FragmentPostBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class AccountInfoFragment : Fragment() {
-    private val binding by lazy { FragmentAccountInfoBinding.inflate(layoutInflater) }
+class PostFragment : Fragment() {
+    private val binding by lazy { FragmentPostBinding.inflate(layoutInflater) }
 
     private val postViewModel: PostViewModel by viewModel()
     private val postAdapter = PostAdapter()
@@ -45,21 +45,3 @@ class AccountInfoFragment : Fragment() {
         binding.recyclerView.adapter = postAdapter
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
