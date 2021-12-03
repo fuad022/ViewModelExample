@@ -42,7 +42,7 @@ class LoginFragment : Fragment() {
     private fun validateUsername(inputText: String, textInputLayout: TextInputLayout): Boolean {
         return if (inputText.length <= 4) {
             textInputLayout.isErrorEnabled = true
-            textInputLayout.error = "* Minimum 5 Characters Allowed"
+            textInputLayout.error = "* Minimum 5 Characters Allowed"//
             false
         } else {
             textInputLayout.isErrorEnabled = false
